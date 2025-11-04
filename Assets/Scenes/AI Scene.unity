@@ -1549,7 +1549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464201953}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2692,7 +2692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4539911876844761364, guid: 7f9d3eec86975ee4a84a5e96e5df16ca, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3483,7 +3483,7 @@ GameObject:
   - component: {fileID: 986159499}
   - component: {fileID: 986159498}
   - component: {fileID: 986159497}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6773,7 +6773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3177474708539373654, guid: 56ed3a9564f932e4aba6babf56657f5c, type: 3}
       propertyPath: m_playerLayerMask.m_Bits
-      value: 8
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 3243226458370346947, guid: 56ed3a9564f932e4aba6babf56657f5c, type: 3}
       propertyPath: m_Layer
@@ -7054,7 +7054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4539911876844761364, guid: 7f9d3eec86975ee4a84a5e96e5df16ca, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7466,7 +7466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5442354269591232542, guid: ab70a8769550c3c45b3cf892a9c7828d, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5802848742037995979, guid: ab70a8769550c3c45b3cf892a9c7828d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

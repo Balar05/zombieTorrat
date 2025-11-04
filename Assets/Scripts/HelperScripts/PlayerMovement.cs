@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+
     private void Update()
     {
         Vector2 mousePosition = mousePositionAction.action.ReadValue<Vector2>();

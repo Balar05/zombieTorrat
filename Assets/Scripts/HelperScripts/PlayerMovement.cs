@@ -24,15 +24,22 @@ public class PlayerMovement : MonoBehaviour
         m_mouseClickAction.action.performed -= OnMouseClick;
     }
 
+ 
     private void OnMouseClick(InputAction.CallbackContext context)
     {
-        Vector2 mousePosition = mousePositionAction.action.ReadValue<Vector2>();
-        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 1000, m_groundLayer))
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+        // Ignorem la capa "DetectionLayer" (on està el Player)
+        if (Physics.Raycast(ray, out RaycastHit hit, 1000f, ~LayerMask.GetMask("DetectionLayer")))
         {
-            m_navMeshAgent.SetDestination(hit.point);
+            if (NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 1.0f, NavMesh.AllAreas))
+            {
+                m_navMeshAgent.isStopped = false;
+                m_navMeshAgent.SetDestination(navHit.position);
+            }
         }
     }
+
 
 
 

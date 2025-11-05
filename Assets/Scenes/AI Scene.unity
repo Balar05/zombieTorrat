@@ -6333,6 +6333,45 @@ MonoBehaviour:
           m_Value1: 8161965711152534923
         Name: New Line Of Sight Detector
         m_Value: {fileID: 1996260942}
+--- !u!114 &1996260953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996260939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb57cc2d79c8414793aea94929d4d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1996260954
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996260939}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1996488944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6980,8 +7019,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1713362403811652473, guid: 56ed3a9564f932e4aba6babf56657f5c, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1996260954}
+    - targetCorrespondingSourceObject: {fileID: 1713362403811652473, guid: 56ed3a9564f932e4aba6babf56657f5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1996260947}
+    - targetCorrespondingSourceObject: {fileID: 1713362403811652473, guid: 56ed3a9564f932e4aba6babf56657f5c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1996260953}
   m_SourcePrefab: {fileID: 100100000, guid: 56ed3a9564f932e4aba6babf56657f5c, type: 3}
 --- !u!1001 &3093767352584955642
 PrefabInstance:
@@ -7461,13 +7506,99 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7106844446180669868, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6700802826180313754}
   m_SourcePrefab: {fileID: 100100000, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
 --- !u!1 &6700802826180313747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7106844446180669868, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
   m_PrefabInstance: {fileID: 6700802826180313746}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6700802826180313754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700802826180313747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbb75b8bd96b564baa796abfd2508f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 1020456467354019926, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+  dropInterval: 1.5
+--- !u!1001 &6937571219218260023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1020456467354019926, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_Name
+      value: BloodPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020456467354019926, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469236484471669989, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469236484471669989, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_TagString
+      value: SmellSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.882
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962433160247488990, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
 --- !u!1001 &8020212699430484339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7573,3 +7704,4 @@ SceneRoots:
   - {fileID: 609348235}
   - {fileID: 2878426043443916151}
   - {fileID: 6700802826180313746}
+  - {fileID: 6937571219218260023}

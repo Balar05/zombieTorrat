@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4962433160247488990}
   - component: {fileID: 1142221298063345101}
   - component: {fileID: 3552430342373520933}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BloodPrefab
   m_TagString: SmellSource
   m_Icon: {fileID: 0}
@@ -79,9 +79,9 @@ GameObject:
   - component: {fileID: 5760111592869032590}
   - component: {fileID: 2313623975483291243}
   - component: {fileID: 3245462608260313377}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: SmellSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 96cdc1d4d8dd9f2409621948e9a83d42, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

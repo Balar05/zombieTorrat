@@ -1,37 +1,19 @@
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.AI;
+﻿using UnityEngine;
+using Unity.Behavior;
 
 public class SmellSensor : MonoBehaviour
 {
-    private NavMeshAgent agent;
-    private Queue<Vector3> trail = new Queue<Vector3>();
-
-    private void Awake()
-    {
-        agent = GetComponentInParent<NavMeshAgent>();
-    }
+    [SerializeReference] public BlackboardVariable<Vector3> SmellTarget;
+    [SerializeReference] public BlackboardVariable<bool> HasSmell;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SmellSource"))
         {
-            trail.Enqueue(other.transform.position);
+            SmellTarget.Value = other.transform.position;
+            HasSmell.Value = true;
 
-            if (!agent.hasPath || agent.remainingDistance < 0.4f)
-                MoveToNextPoint();
+            Debug.Log("👃 Zombie ha detectat sang → SmellTarget actualitzat!");
         }
-    }
-
-    private void Update()
-    {
-        if (!agent.hasPath || agent.remainingDistance < 0.4f)
-            MoveToNextPoint();
-    }
-
-    private void MoveToNextPoint()
-    {
-        if (trail.Count == 0) return;
-        agent.SetDestination(trail.Dequeue());
     }
 }

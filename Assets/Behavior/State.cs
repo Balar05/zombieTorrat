@@ -7,5 +7,6 @@ public enum State
     Idle,
 	Patrol,
 	Chase,
-	Attack
+	Attack,
+    FollowSmell
 }

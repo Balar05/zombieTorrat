@@ -27,15 +27,17 @@ public class SkeletonInvestigatingSmell : MonoBehaviour
                 agent.SetDestination(manager.smellTarget);
             }
 
-            
-            //if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-            //{
-            //    hasSmellTarget = false;
-            //    manager.ChangeState(SkeletonState.Wandering);
-            //}
+
+            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            {
+                hasSmellTarget = false;
+                manager.ChangeState(SkeletonState.Wandering);
+            }
         }
     }
 
+    // On Trigger detects if the Sphere Collider of the Skeleton touches an object
+    // with a Trigger and the Tag "SmellSource"
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SmellSource"))

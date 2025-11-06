@@ -21,6 +21,7 @@ public class SkeletonStateManager : MonoBehaviour
 
     void Start()
     {
+        // Gets components from the 3 states' scripts.
         wandering = GetComponent<SkeletonWandering>();
         investigating = GetComponent<SkeletonInvestigatingSmell>();
         chasing = GetComponent<SkeletonChasing>();
@@ -78,6 +79,8 @@ public class SkeletonStateManager : MonoBehaviour
 
     void AlertNearbySkeletons()
     {
+        // Checks nearby Skeletons within s Sphere and Broadcasts a Message to the Skeletons with the tag Skeleton
+
         Collider[] nearby = Physics.OverlapSphere(transform.position, detectionRange);
 
         foreach (Collider col in nearby)
@@ -86,15 +89,6 @@ public class SkeletonStateManager : MonoBehaviour
             {
                 col.gameObject.BroadcastMessage("OnPlayerDetected", SendMessageOptions.DontRequireReceiver);
             }
-        }
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("SmellSource"))
-        {
-            smellTarget = other.transform.position;
-            ChangeState(SkeletonState.InvestigatingSmell);
         }
     }
 

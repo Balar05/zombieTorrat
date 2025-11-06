@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public class SkeletonChasing : MonoBehaviour
 {
     public Transform playerTransform;
-    public float chaseSpeed = 6f;
+    public float chaseSpeed = 4f;
     public float viewAngle = 60f;
     public float viewDistance = 15f;
     public LayerMask obstacleMask;

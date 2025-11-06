@@ -17,7 +17,7 @@ public class SkeletonStateManager : MonoBehaviour
 
     public Vector3 smellTarget;
     public Transform player;
-    public float detectionRange = 10f;
+    public float detectionRange = 200f;
 
     void Start()
     {
@@ -42,7 +42,7 @@ public class SkeletonStateManager : MonoBehaviour
                     if (distanceToPlayer <= detectionRange)
                     {
                         ChangeState(SkeletonState.Chasing);
-                        AlertNearbyZombies();
+                        AlertNearbySkeletons();
                     }
                 }
                 break;
@@ -70,16 +70,26 @@ public class SkeletonStateManager : MonoBehaviour
         }
     }
 
-    void AlertNearbyZombies()
+    void AlertNearbySkeletons()
     {
         Collider[] nearby = Physics.OverlapSphere(transform.position, detectionRange);
 
         foreach (Collider col in nearby)
         {
-            if (col.CompareTag("Zombie") && col.gameObject != this.gameObject)
+            if (col.CompareTag("Skeleton") && col.gameObject != this.gameObject)
             {
                 col.gameObject.BroadcastMessage("OnPlayerDetected", SendMessageOptions.DontRequireReceiver);
             }
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SmellSource"))
+        {
+            smellTarget = other.transform.position;
+            ChangeState(SkeletonState.InvestigatingSmell);
+        }
+    }
+
 }

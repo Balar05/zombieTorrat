@@ -1,71 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8036844262192029417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8197334615085961162}
-  - component: {fileID: 454761864947074423}
-  - component: {fileID: 6842916010767529936}
-  m_Layer: 3
-  m_Name: SmellSensor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8197334615085961162
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8036844262192029417}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2057237571033082307}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &454761864947074423
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8036844262192029417}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 8
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6842916010767529936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8036844262192029417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb57cc2d79c8414793aea94929d4d64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8607377261300124778
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,27 +183,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.33
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.33
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.33
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.82
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.538
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.93
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       propertyPath: m_LocalRotation.w
@@ -748,16 +682,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5932144383623249579}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8197334615085961162}
     - targetCorrespondingSourceObject: {fileID: 7997947301047521070, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1500849909996333928}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7810664900326418586}
+      addedObject: {fileID: 8888158740216020310}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5654685206141632906}
@@ -788,7 +719,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02f3da728a98794428c1327dcd2e5317, type: 3}
   m_PrefabInstance: {fileID: 1947384448915787304}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &7810664900326418586
+--- !u!54 &8888158740216020310
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -845,7 +776,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713362403811652473}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 5
   m_Acceleration: 8
@@ -909,6 +840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   smellTarget: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  detectionRange: 15
 --- !u!114 &5636973509416125324
 MonoBehaviour:
   m_ObjectHideFlags: 0

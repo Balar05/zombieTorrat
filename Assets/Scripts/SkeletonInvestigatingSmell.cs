@@ -18,16 +18,16 @@ public class SkeletonInvestigatingSmell : MonoBehaviour
     {
         agent.speed = investigatingSpeed;
 
-        // Si aún no tiene destino, lo asignamos
-        if (!agent.hasPath)
+        if (manager.smellTarget != Vector3.zero && agent.isOnNavMesh)
         {
+            // Siempre reasigna el destino al entrar en estado
             agent.SetDestination(manager.smellTarget);
-        }
 
-        // Cuando llega al destino, vuelve a deambular
-        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-        {
-            manager.ChangeState(SkeletonState.Wandering);
+            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            {
+                manager.ChangeState(SkeletonState.Wandering);
+            }
         }
     }
+
 }

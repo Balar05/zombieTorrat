@@ -60,7 +60,13 @@ public class SkeletonStateManager : MonoBehaviour
     public void ChangeState(SkeletonState newState)
     {
         currentState = newState;
+
+        if (newState == SkeletonState.InvestigatingSmell)
+        {
+            investigating?.Run(); // fuerza el movimiento hacia la sangre
+        }
     }
+
 
     public void OnPlayerDetected()
     {

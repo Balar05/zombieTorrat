@@ -7,6 +7,7 @@ public class SkeletonInvestigatingSmell : MonoBehaviour
 
     private NavMeshAgent agent;
     private SkeletonStateManager manager;
+    private bool hasSmellTarget = false;
 
     void Start()
     {
@@ -18,16 +19,31 @@ public class SkeletonInvestigatingSmell : MonoBehaviour
     {
         agent.speed = investigatingSpeed;
 
-        if (manager.smellTarget != Vector3.zero && agent.isOnNavMesh)
+        if (hasSmellTarget && agent.isOnNavMesh)
         {
-            // Siempre reasigna el destino al entrar en estado
-            agent.SetDestination(manager.smellTarget);
-
-            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            // Assign destination if the skeleton does not have a path to follow or it has arrived
+            if (!agent.hasPath || agent.remainingDistance <= agent.stoppingDistance)
             {
-                manager.ChangeState(SkeletonState.Wandering);
+                agent.SetDestination(manager.smellTarget);
             }
+
+            
+            //if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            //{
+            //    hasSmellTarget = false;
+            //    manager.ChangeState(SkeletonState.Wandering);
+            //}
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SmellSource"))
+        {
+            manager.smellTarget = other.transform.position;
+            hasSmellTarget = true;
+            manager.ChangeState(SkeletonState.InvestigatingSmell);
+            Debug.Log($"Blood smelled");
+        }
+    }
 }

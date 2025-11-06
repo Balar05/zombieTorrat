@@ -26,15 +26,17 @@ public class SkeletonChasing : MonoBehaviour
         agent.speed = chaseSpeed;
         agent.SetDestination(playerTransform.position);
 
-        // Verifica si el jugador sigue visible
+        // Check player's visibility
         Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
 
+        // Checks angle, distance and obstacles
+
         if (angleToPlayer > viewAngle / 2f || distanceToPlayer > viewDistance ||
-            Physics.Raycast(transform.position + Vector3.up, directionToPlayer, distanceToPlayer, obstacleMask))
+            Physics.Raycast(transform.position + Vector3.up, directionToPlayer, distanceToPlayer, obstacleMask)) 
         {
-            // Si el jugador se escapa o se esconde, vuelve a deambular
+            // Change state if the Skeleton can't see the player
             manager.ChangeState(SkeletonState.Wandering);
         }
     }

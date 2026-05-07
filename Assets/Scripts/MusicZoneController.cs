@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Audio; // Obligatori per fer servir Snapshots
+using UnityEngine.Audio; 
 
 public class MusicZoneController : MonoBehaviour
 {
@@ -7,9 +7,9 @@ public class MusicZoneController : MonoBehaviour
     public AudioMixerSnapshot generalSnapshot;
     public AudioMixerSnapshot pobleSnapshot;
     public AudioMixerSnapshot covaSnapshot;
-    public float transitionTime = 0.5f; // Temps que triga el "fade"
+    public float transitionTime = 0.5f; 
 
-    // Criteri 8: Música interactiva per zones
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ZonaPoble"))
@@ -26,7 +26,7 @@ public class MusicZoneController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        // Quan sortim de qualsevol zona, tornem al Snapshot general
+        
         if (other.CompareTag("ZonaPoble") || other.CompareTag("cave"))
         {
             generalSnapshot.TransitionTo(transitionTime);

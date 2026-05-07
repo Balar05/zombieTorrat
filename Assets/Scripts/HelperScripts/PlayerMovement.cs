@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
         // Ignorem la capa "DetectionLayer" (on està el Player)
-        if (Physics.Raycast(ray, out RaycastHit hit, 1000f, ~LayerMask.GetMask("DetectionLayer")))
+        if (Physics.Raycast(ray, out RaycastHit hit, 1000f, LayerMask.GetMask("Ground")))
         {
             if (NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 1.0f, NavMesh.AllAreas))
             {

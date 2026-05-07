@@ -15,22 +15,18 @@ public class MusicZoneController : MonoBehaviour
         if (other.CompareTag("ZonaPoble"))
         {
             pobleSnapshot.TransitionTo(transitionTime);
-            Debug.Log("Entrant al Poble: Canviant música...");
         }
         else if (other.CompareTag("cave"))
         {
             covaSnapshot.TransitionTo(transitionTime);
-            Debug.Log("Entrant a la cova: Canviant música...");
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         
         if (other.CompareTag("ZonaPoble") || other.CompareTag("cave"))
         {
             generalSnapshot.TransitionTo(transitionTime);
-            Debug.Log("Sortint de la zona: Tornant a música general");
         }
     }
 }

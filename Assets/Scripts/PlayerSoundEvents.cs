@@ -23,8 +23,6 @@ public class PlayerSoundEvents : MonoBehaviour
             audioSource.PlayOneShot(attackSound);
         }
     }
-
-    
     public void PlayFootstepSound()
     {
         AudioClip clipToPlay = null;
@@ -36,7 +34,6 @@ public class PlayerSoundEvents : MonoBehaviour
             clipToPlay = passosAigua[Random.Range(0, passosAigua.Length)];
         else if (superficieActual == "Fusta" && passosFusta.Length > 0)
             clipToPlay = passosFusta[Random.Range(0, passosFusta.Length)];
-
         
         if (clipToPlay != null)
         {

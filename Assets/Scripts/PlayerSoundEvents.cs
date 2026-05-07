@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class PlayerSoundEvents : MonoBehaviour
 {
-    [Header("So d'Atac")]
+    //Inicialitzem un AudioSource i els AudioClips.
     public AudioSource audioSource;
     public AudioClip attackSound;
 
-    [Header("Sons de Passos")]
     public AudioClip[] passosHerba; 
     public AudioClip[] passosAigua; 
     public AudioClip[] passosFusta; 
 
-   
+   //Creem una variable per saber a quina superfície estem i la inicialitzem.
+
     public string superficieActual = "Herba";
 
-    
+    //Funció per reproduïr el so d'atac.
     public void PlayAttackSound()
     {
         if (audioSource != null && attackSound != null)
@@ -23,11 +23,14 @@ public class PlayerSoundEvents : MonoBehaviour
             audioSource.PlayOneShot(attackSound);
         }
     }
+
+    //Funció per reproduïr els passos.
     public void PlayFootstepSound()
     {
         AudioClip clipToPlay = null;
 
-        
+        //Depenent de la superfície, reproduïm un so o un altre.
+        //Seleccionem un so aleatori de la llista de cada tipus de so.
         if (superficieActual == "Herba" && passosHerba.Length > 0)
             clipToPlay = passosHerba[Random.Range(0, passosHerba.Length)];
         else if (superficieActual == "Aigua" && passosAigua.Length > 0)

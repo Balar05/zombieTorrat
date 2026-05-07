@@ -3,7 +3,7 @@ using UnityEngine.Audio;
 
 public class MusicZoneController : MonoBehaviour
 {
-    [Header("Configuració de Snapshots")]
+    //Inizialitzar els 3 snapshots i el temps de transició.
     public AudioMixerSnapshot generalSnapshot;
     public AudioMixerSnapshot pobleSnapshot;
     public AudioMixerSnapshot covaSnapshot;
@@ -12,10 +12,12 @@ public class MusicZoneController : MonoBehaviour
    
     private void OnTriggerEnter(Collider other)
     {
+        //Si entrem al poble, configurem el snapshot del poble.
         if (other.CompareTag("ZonaPoble"))
         {
             pobleSnapshot.TransitionTo(transitionTime);
         }
+        //Si entrem a la cova, configurem el snapshot de la cova.
         else if (other.CompareTag("cave"))
         {
             covaSnapshot.TransitionTo(transitionTime);
@@ -23,7 +25,7 @@ public class MusicZoneController : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        
+        //Si sortim del poble o de la cova, configurem el snapshot general del bosc.
         if (other.CompareTag("ZonaPoble") || other.CompareTag("cave"))
         {
             generalSnapshot.TransitionTo(transitionTime);

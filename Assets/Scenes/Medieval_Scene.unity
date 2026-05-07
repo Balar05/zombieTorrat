@@ -5065,6 +5065,7 @@ Transform:
   - {fileID: 716895054}
   - {fileID: 1991268243}
   - {fileID: 1330813033}
+  - {fileID: 1219308803}
   m_Father: {fileID: 1500706815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468086471 stripped
@@ -7589,7 +7590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657140670}
   m_Layer: 0
-  m_Name: Non Ai Objets
+  m_Name: Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14761,6 +14762,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 703726867841230225, guid: 6224659d9e68d1a41b8681a33c400b71, type: 3}
+--- !u!4 &1219308803 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21b44b2e32c4ff94d9ddaa49362218fd, type: 3}
+  m_PrefabInstance: {fileID: 1910760237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1230270432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23803,7 +23809,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 464201953}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 21b44b2e32c4ff94d9ddaa49362218fd, type: 3}
       propertyPath: m_LocalScale.x
@@ -23811,7 +23817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21b44b2e32c4ff94d9ddaa49362218fd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4604456
+      value: 1.4604458
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21b44b2e32c4ff94d9ddaa49362218fd, type: 3}
       propertyPath: m_LocalScale.z
@@ -28087,12 +28093,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1768568768164175122, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
+    - {fileID: 1172639652569740166, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7106844446180669868, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6700802826180313754}
     - targetCorrespondingSourceObject: {fileID: 7106844446180669868, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6700802826180313766}
@@ -28123,20 +28127,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7106844446180669868, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
   m_PrefabInstance: {fileID: 6700802826180313746}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6700802826180313754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6700802826180313747}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbb75b8bd96b564baa796abfd2508f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodPrefab: {fileID: 1020456467354019926, guid: 589948b74855cb440bcd46a23c53f622, type: 3}
-  dropInterval: 1.5
 --- !u!4 &6700802826180313760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7632270900707861270, guid: ae99dfb75ebb0754cb7e0a0d9dd93b30, type: 3}
@@ -28165,7 +28155,7 @@ MonoBehaviour:
   generalSnapshot: {fileID: 24500006, guid: 1c5dc3df7cc4d844592cba576f789c22, type: 2}
   pobleSnapshot: {fileID: 7225331349652421721, guid: 1c5dc3df7cc4d844592cba576f789c22, type: 2}
   covaSnapshot: {fileID: -9207749712198547390, guid: 1c5dc3df7cc4d844592cba576f789c22, type: 2}
-  transitionTime: 2
+  transitionTime: 1
 --- !u!54 &6700802826180313773
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28227,13 +28217,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSoundEvents
   audioSource: {fileID: 1377326293}
-  attackSound: {fileID: 8300000, guid: c5d16603cc502a84cbd5f96df63b79e4, type: 3}
+  attackSound: {fileID: 8300000, guid: 4e96bf359cf1b5b449702ec852afe9cf, type: 3}
   passosHerba:
   - {fileID: 8300000, guid: 5294a12428648764bae3296a012bda16, type: 3}
+  - {fileID: 8300000, guid: d223e831b5ba9534ba6a2ceb8f865bbe, type: 3}
+  - {fileID: 8300000, guid: 325daf17a2c752746a7b260732d2eca1, type: 3}
   passosAigua:
   - {fileID: 8300000, guid: c586cd0ef95edba439656c8fcddbb554, type: 3}
+  - {fileID: 8300000, guid: 8fc057adccf02d04b8a253297aafa4a8, type: 3}
+  - {fileID: 8300000, guid: efe9a2de7ad32c340bf8b3c7e153cfb4, type: 3}
   passosFusta:
   - {fileID: 8300000, guid: 5e9c903e2b73a0148b60306d46e135c4, type: 3}
+  - {fileID: 8300000, guid: df5e490c6338bea40bbd60102b0191f0, type: 3}
+  - {fileID: 8300000, guid: 2fc7b83aee6d9c64f88063f8c5edc98e, type: 3}
   superficieActual: Herba
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -28248,4 +28244,3 @@ SceneRoots:
   - {fileID: 1126037940}
   - {fileID: 1343922284}
   - {fileID: 1534609039}
-  - {fileID: 1910760237}

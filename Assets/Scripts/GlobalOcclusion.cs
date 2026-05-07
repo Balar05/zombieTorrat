@@ -6,12 +6,10 @@ public class GlobalOcclusion : MonoBehaviour
     public AudioMixer audioMixer;
     public string parameterName = "AmbientCutoff";
 
-    [Header("Configuració de Filtre")]
     public float clearFreq = 22000f;
     public float occludedFreq = 800f;
     public float transitionSpeed = 4f;
 
-    [Header("Detecció")]
     public float rayDistance = 10f;
     public LayerMask detectionLayer; 
 

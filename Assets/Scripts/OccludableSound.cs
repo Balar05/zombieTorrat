@@ -3,19 +3,16 @@ using UnityEngine.Audio;
 
 public class OccludableSound : MonoBehaviour
 {
-    [Header("Referències")]
+    
     public Transform player;          
     public AudioMixer audioMixer;     
     public string exposedParam;       
 
-    [Header("Configuració d'Oclusió")]
+    //Configurem els paràmetres de l'oclusió.
     public float clearFreq = 22000f;  
     public float occludedFreq = 800f; 
     public float transitionSpeed = 5f; 
-
-    [Header("Configuració del Raycast")]
     public LayerMask obstacleLayers;  
-
     private float currentFreq;
     private float targetFreq;
 
